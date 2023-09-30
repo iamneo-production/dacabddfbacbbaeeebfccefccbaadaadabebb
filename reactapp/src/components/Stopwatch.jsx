@@ -27,7 +27,9 @@ function Stopwatch() {
   };
 
   const addLap = () => {
-    setLaps([...laps, time]);
+    if (isRunning) {
+      setLaps([...laps, time]);
+    }
   };
 
   const reset = () => {
